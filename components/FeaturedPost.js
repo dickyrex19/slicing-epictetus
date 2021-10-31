@@ -3,14 +3,14 @@ import InfoPost from "@components/InfoPost";
 export default function FeaturedPost() {
   return (
     <article>
-      <div className="flex -mx-4 items-center">
-        <div className="w-8/12 px-4">
+      <div className="flex -mx-4 items-center flex-wrap">
+        <div className="lg:w-8/12 md:w-7/12 w-full px-4">
           <img
             src="/assets/featured-thumbnail.png"
             className="rounded-xl w-full"
           />
         </div>
-        <div className="w-4/12 px-4">
+        <div className="lg:w-4/12 md:w-5/12 w-full px-4">
           <InfoPost
             category="ui design"
             date="July 2 2021"

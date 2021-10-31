@@ -1,4 +1,6 @@
 import { useState } from "react";
+import Link from "next/link";
+import Container from "./Container";
 
 export default function Navbar() {
   const [dropDown, setDropDown] = useState(false);
@@ -10,20 +12,20 @@ export default function Navbar() {
 
   return (
     <nav className="py-10">
-      <div className="container mx-auto">
+      <Container>
         <div className="flex items-center">
           <div className="w-2/12 flex items-center text-lg">
             <div className="w-10 h-10 bg-gray-500 rounded flex items-center justify-center mr-4 shadow-2xl text-lg">
               E
             </div>
-            Epictetus
+            <Link href="/">Epictetus</Link>
           </div>
           <div className="w-7/12">
             <ul className="flex space-x-12 items-center">
               <li>
-                <a href="#" className="hover:underline">
-                  UI Design
-                </a>
+                <Link href="/posts">
+                  <a className="hover:underline">UI Design</a>
+                </Link>
               </li>
               <li>
                 <a href="#" className="hover:underline">
@@ -87,7 +89,7 @@ export default function Navbar() {
             />
           </div>
         </div>
-      </div>
+      </Container>
     </nav>
   );
 }
