@@ -18,7 +18,7 @@ export default function Navbar() {
             </div>
             Epictetus
           </div>
-          <div className="w-8/12">
+          <div className="w-7/12">
             <ul className="flex space-x-12 items-center">
               <li>
                 <a href="#" className="hover:underline">
@@ -79,7 +79,7 @@ export default function Navbar() {
               </li>
             </ul>
           </div>
-          <div className="w-2/12">
+          <div className="w-3/12">
             <input
               type="text"
               placeholder="Search"
