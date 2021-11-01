@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Head from "next/head";
 import Container from "@components/Container";
 import Layout from "@components/Layout";
 import CardPost from "@components/CardPost";
@@ -9,6 +10,9 @@ export default function Posts() {
   const [posts, setPosts] = useState(mockPosts);
   return (
     <Layout>
+      <Head>
+        <title>Posts - Epictetus</title>
+      </Head>
       <Container>
         <SectionHeader>UI Design</SectionHeader>
         {!posts.length ? (

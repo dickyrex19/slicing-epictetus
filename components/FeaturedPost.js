@@ -1,3 +1,4 @@
+import Link from "next/link";
 import InfoPost from "@components/InfoPost";
 
 export default function FeaturedPost() {
@@ -5,10 +6,14 @@ export default function FeaturedPost() {
     <article>
       <div className="flex -mx-4 lg:items-center items-start flex-wrap">
         <div className="lg:w-8/12 md:w-7/12 w-full px-4">
-          <img
-            src="/assets/featured-thumbnail.png"
-            className="rounded-xl w-full mb-4 md:mb-0"
-          />
+          <Link href="/detail">
+            <a>
+              <img
+                src="/assets/featured-thumbnail.png"
+                className="rounded-xl w-full mb-4 md:mb-0"
+              />
+            </a>
+          </Link>
         </div>
         <div className="lg:w-4/12 md:w-5/12 w-full px-4">
           <InfoPost

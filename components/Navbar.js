@@ -6,9 +6,9 @@ import Container from "./Container";
 export default function Navbar() {
   const [dropDown, setDropDown] = useState(false);
   const dropDownList = [
-    { text: "Internet", href: "#" },
-    { text: "Books", href: "#" },
-    { text: "Open Source", href: "#" },
+    { text: "Internet", href: "/posts" },
+    { text: "Books", href: "/posts" },
+    { text: "Open Source", href: "/posts" },
   ];
   const [offcanvas, setOffcanvas] = useState(false);
   const [search, setSearch] = useState(false);
@@ -52,11 +52,15 @@ export default function Navbar() {
               </svg>
             </button>
           </div>
-          <div className="lg:w-2/12 w-6/12 lg:justify-start justify-center flex items-center text-lg">
-            <div className="w-10 h-10 bg-gray-500 rounded flex items-center justify-center mr-4 shadow-2xl text-lg">
-              E
-            </div>
-            <Link href="/">Epictetus</Link>
+          <div className="lg:w-2/12 w-6/12">
+            <Link href="/">
+              <a className="lg:justify-start justify-center flex items-center text-lg">
+                <div className="w-10 h-10 bg-gray-500 rounded flex items-center justify-center mr-4 shadow-2xl text-lg">
+                  E
+                </div>
+                Epictetus
+              </a>
+            </Link>
           </div>
           <div className="w-3/12 lg:hidden text-right">
             <button onClick={() => setSearch(!search)}>
@@ -120,14 +124,14 @@ export default function Navbar() {
                 </Link>
               </li>
               <li>
-                <a href="#" className="hover:underline">
-                  Front-end
-                </a>
+                <Link href="/posts">
+                  <a className="hover:underline">Front-end</a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="hover:underline">
-                  Back-end
-                </a>
+                <Link href="/posts">
+                  <a className="hover:underline">Back-end</a>
+                </Link>
               </li>
               <li className="relative">
                 <a
@@ -160,12 +164,11 @@ export default function Navbar() {
                         key={text}
                         className="border-b border-white/5 last:border-0"
                       >
-                        <a
-                          href={href}
-                          className="flex px-6 py-3 hover:bg-gray-600/60"
-                        >
-                          {text}
-                        </a>
+                        <Link href={href}>
+                          <a className="flex px-6 py-3 hover:bg-gray-600/60">
+                            {text}
+                          </a>
+                        </Link>
                       </li>
                     ))}
                   </ul>
